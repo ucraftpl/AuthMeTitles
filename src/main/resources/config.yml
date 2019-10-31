@@ -1,0 +1,3 @@
+header: "&eAuthMeTitles"
+unregistered: "&cRegister with /register <pass> <pass>"
+unauthenticated: "&cLog in with /login <pass>"

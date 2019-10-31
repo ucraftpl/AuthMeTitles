@@ -1,0 +1,7 @@
+name: AuthMeTitles
+version: ${project.version}
+main: pl.ucraft.authmetitles.AuthMeTitlesPlugin
+depend: [AuthMe]
+authors: [artur9010]
+description: Display titles to unlogged/unregistered players
+website: https://motyka.pro
