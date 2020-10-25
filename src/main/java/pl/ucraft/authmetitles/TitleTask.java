@@ -6,16 +6,16 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class TitleTask extends BukkitRunnable {
+public class TitleTask implements Runnable {
 
-    private AuthMeApi authMeApi;
-    private String titleHeader;
-    private String subtitleUnregistered;
-    private String subtitleUnauthenticated;
+    private final AuthMeApi authMeApi;
+    private final String titleHeader;
+    private final String subtitleUnregistered;
+    private final String subtitleUnauthenticated;
 
     TitleTask(AuthMeTitlesPlugin plugin, AuthMeApi authMeApi){
         this.authMeApi = authMeApi;
-        this.titleHeader = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("header", "uCraft.pl"));
+        this.titleHeader = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("header", "KiwiMc.pl"));
         this.subtitleUnregistered = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("unregistered", "Register with /register <pass> <pass>"));
         this.subtitleUnauthenticated = ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("unauthenticated", "Log in with /login <password>"));
     }
